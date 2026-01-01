@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Enqora AI | AI Agents for Lead Capture & Booking</title>
+  <meta name="description" content="Enqora AI installs AI agents that respond instantly, qualify leads, book appointments, and follow up automatically across websites, social DMs, and messaging apps." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Enqora AI | AI Agents for Lead Capture & Booking" />
+  <meta property="og:description" content="AI systems that turn enquiries into revenue — automatically." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicons (generated in this pack) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --panel:#111827;
+      --card:#0f172a;
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --line:rgba(255,255,255,.10);
+      --accent:#60a5fa;
+      --accent2:#34d399;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(96,165,250,.18), transparent 55%),
+                  radial-gradient(900px 500px at 90% 20%, rgba(52,211,153,.12), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    header{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(10px);
+      background: rgba(11,15,23,.7);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .logo{
+      width:34px; height:34px; border-radius:10px;
+      background: linear-gradient(135deg, rgba(96,165,250,1), rgba(52,211,153,1));
+      box-shadow: var(--shadow);
+    }
+    nav a{
+      text-decoration:none; color:var(--muted); font-weight:700;
+      margin-left:14px;
+    }
+    nav a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 16px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(96,165,250,1), rgba(52,211,153,1));
+      color:#06101f; font-weight:900; text-decoration:none;
+      box-shadow: var(--shadow);
+      border:0;
+      cursor:pointer;
+    }
+    .btn.secondary{
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--line);
+      box-shadow: none;
+      font-weight:800;
+    }
+    .hero{padding:54px 0 28px}
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:26px;
+      align-items:stretch;
+    }
+    .headline{
+      font-size: clamp(30px, 4vw, 52px);
+      line-height:1.05;
+      margin:0 0 12px;
+      letter-spacing:-.7px;
+    }
+    .sub{
+      margin:0 0 22px;
+      color:var(--muted);
+      font-size: clamp(16px, 1.4vw, 19px);
+      max-width: 64ch;
+    }
+    .cta{display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 10px}
+    .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .pill{
+      padding:8px 12px; border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      background: rgba(17,24,39,.35);
+      font-weight:700;
+      font-size:13px;
+    }
+    .panel{
+      background: linear-gradient(180deg, rgba(17,24,39,.75), rgba(15,23,42,.55));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .panel h3{margin:0 0 10px}
+    .panel .small{color:var(--muted); margin:0 0 14px; font-size:14px}
+    .kpi{
+      display:grid; grid-template-columns: 1fr 1fr; gap:12px;
+      margin-top:14px;
+    }
+    .kpi .card{
+      background: rgba(15,23,42,.65);
+      border:1px solid var(--line);
+      border-radius: 14px;
+      padding:14px;
+    }
+    .kpi .card b{display:block; font-size:18px}
+    section{padding:34px 0}
+    .section-title{
+      font-size: 26px; margin:0 0 10px; letter-spacing:-.3px;
+    }
+    .section-sub{color:var(--muted); margin:0 0 18px; max-width: 90ch}
+    .cards{
+      display:grid; grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .card{
+      background: rgba(15,23,42,.55);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+    }
+    .card h4{margin:0 0 8px}
+    .card p{margin:0; color:var(--muted)}
+    .steps{
+      display:grid; grid-template-columns: repeat(5, 1fr);
+      gap:12px;
+      counter-reset: step;
+    }
+    .step{
+      padding:16px;
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background: rgba(17,24,39,.35);
+    }
+    .step:before{
+      counter-increment: step;
+      content: counter(step);
+      display:inline-flex;
+      width:28px; height:28px; border-radius:10px;
+      align-items:center; justify-content:center;
+      font-weight:900;
+      color:#06101f;
+      background: linear-gradient(135deg, rgba(96,165,250,1), rgba(52,211,153,1));
+      margin-bottom:10px;
+    }
+    .step b{display:block; margin-bottom:6px}
+    .pricing{
+      display:grid; grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      align-items:stretch;
+    }
+    .price{
+      position:relative;
+      padding:18px;
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background: rgba(15,23,42,.55);
+    }
+    .price.featured{
+      outline: 2px solid rgba(96,165,250,.55);
+      box-shadow: 0 20px 50px rgba(0,0,0,.45);
+      transform: translateY(-2px);
+    }
+    .badge{
+      position:absolute; top:14px; right:14px;
+      font-size:12px; font-weight:900;
+      padding:6px 10px; border-radius:999px;
+      background: rgba(96,165,250,.18);
+      border:1px solid rgba(96,165,250,.35);
+      color: var(--text);
+    }
+    .price h4{margin:0 0 6px}
+    .amount{font-size:28px; font-weight:950; margin:0 0 4px}
+    .per{color:var(--muted); margin:0 0 14px}
+    ul{margin:0; padding-left:18px; color:var(--muted)}
+    li{margin:8px 0}
+    .faq{
+      display:grid; grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    details{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(17,24,39,.35);
+      padding:14px 16px;
+    }
+    summary{cursor:pointer; font-weight:900}
+    details p{margin:10px 0 0; color:var(--muted)}
+    footer{
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      padding:22px 0 30px;
+    }
+    .two-col{
+      display:grid; grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    .contact{
+      display:grid; gap:10px;
+    }
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      background: rgba(15,23,42,.55);
+      color: var(--text);
+      font-size:14px;
+    }
+    textarea{min-height:110px; resize:vertical}
+    .hint{font-size:13px; color:var(--muted)}
+    .note{font-size:12px; color:var(--muted); margin-top:10px}
+    @media (max-width: 980px){
+      .grid{grid-template-columns: 1fr}
+      .cards{grid-template-columns: 1fr}
+      .pricing{grid-template-columns: 1fr}
+      .steps{grid-template-columns: 1fr}
+      .faq{grid-template-columns: 1fr}
+      .two-col{grid-template-columns: 1fr}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>Enqora AI</div>
+    </div>
+    <nav aria-label="Primary">
+      <a href="#solution">Solution</a>
+      <a href="#how">How it works</a>
+      <a href="#usecases">Use cases</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Book a demo</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="grid">
+      <div>
+        <h1 class="headline">AI agents that turn enquiries into revenue — automatically.</h1>
+        <p class="sub">
+          Enqora AI installs AI agents that respond instantly, qualify leads, book appointments, and follow up 24/7 —
+          across your website, social DMs, and messaging apps. Industry-agnostic, measurable, and built to scale.
+        </p>
+        <div class="cta">
+          <a class="btn" href="#contact">Book a 10-minute demo</a>
+          <a class="btn secondary" href="#pricing">View packages</a>
+        </div>
+        <div class="pillrow">
+          <span class="pill">Website AI Agent</span>
+          <span class="pill">Instagram / Facebook DMs</span>
+          <span class="pill">WhatsApp (optional)</span>
+          <span class="pill">Automated follow-ups</span>
+          <span class="pill">CRM + reporting</span>
+          <span class="pill">GDPR-aware setup</span>
+        </div>
+      </div>
+
+      <aside class="panel" aria-label="System preview">
+        <h3>What gets installed</h3>
+        <p class="small">A conversion-first system that reduces admin and increases bookings.</p>
+        <div class="kpi">
+          <div class="card"><b>Instant replies</b><span class="hint">Seconds, not hours</span></div>
+          <div class="card"><b>Auto booking</b><span class="hint">Appointments & demos</span></div>
+          <div class="card"><b>Follow-up</b><span class="hint">2h / 24h / 72h</span></div>
+          <div class="card"><b>Reporting</b><span class="hint">Enquiries → bookings</span></div>
+        </div>
+        <p class="note">
+          Ideal for enquiry-driven businesses: clinics, salons, fitness, real estate, local services, B2B.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="solution">
+    <h2 class="section-title">The Enquiry-to-Booking AI System</h2>
+    <p class="section-sub">
+      Most businesses lose revenue due to slow responses and inconsistent follow-up. Enqora AI installs an AI layer that captures and qualifies
+      leads, books appointments, and keeps your team focused on delivery — not endless messaging.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h4>Lead capture & qualification</h4>
+        <p>Short, high-converting conversations that collect intent, timeframe, and contact details.</p>
+      </div>
+      <div class="card">
+        <h4>Booking & reminders</h4>
+        <p>Direct booking into your calendar with reminders and staff notifications.</p>
+      </div>
+      <div class="card">
+        <h4>Follow-up & reactivation</h4>
+        <p>Recover leads that don’t book immediately — without staff chasing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <h2 class="section-title">How it works</h2>
+    <p class="section-sub">A proven funnel that’s fast to deploy and easy to manage.</p>
+
+    <div class="steps">
+      <div class="step"><b>Enquiry</b><span class="hint">Website / IG / FB / WhatsApp</span></div>
+      <div class="step"><b>Instant response</b><span class="hint">Replies in seconds</span></div>
+      <div class="step"><b>Qualification</b><span class="hint">Need + timeframe + details</span></div>
+      <div class="step"><b>Auto booking</b><span class="hint">Calendar link / embedded booking</span></div>
+      <div class="step"><b>Report outcomes</b><span class="hint">Enquiries → bookings</span></div>
+    </div>
+  </section>
+
+  <section id="usecases">
+    <h2 class="section-title">Use cases</h2>
+    <p class="section-sub">Same infrastructure. Industry-specific scripts and qualification questions.</p>
+
+    <div class="cards">
+      <div class="card">
+        <h4>Clinics & practices</h4>
+        <p>Appointment handling, triage, reminders, and missed-enquiry recovery.</p>
+      </div>
+      <div class="card">
+        <h4>Beauty & aesthetics</h4>
+        <p>DM-to-booking conversion, treatment FAQs, deposits (optional), and follow-ups.</p>
+      </div>
+      <div class="card">
+        <h4>Fitness & studios</h4>
+        <p>Trial/consultation booking, lead qualification, and automated nurture.</p>
+      </div>
+      <div class="card">
+        <h4>Real estate</h4>
+        <p>Qualify enquiries (budget, timeline), book viewings, and filter low intent.</p>
+      </div>
+      <div class="card">
+        <h4>Local services</h4>
+        <p>Job-type intake, postcode capture, quote requests, and schedule booking.</p>
+      </div>
+      <div class="card">
+        <h4>B2B services</h4>
+        <p>Inbound routing, qualification, demo booking, and pipeline visibility.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2 class="section-title">Packages</h2>
+    <p class="section-sub">
+      Transparent setup + monthly optimisation. Designed for teams that want more bookings with less admin.
+    </p>
+
+    <div class="pricing">
+      <div class="price">
+        <h4>Starter</h4>
+        <p class="amount">£349<span class="hint">/month</span></p>
+        <p class="per">+ £750 one-time setup</p>
+        <ul>
+          <li>1 channel (Website or IG/FB)</li>
+          <li>Lead capture + booking flow</li>
+          <li>Basic CRM logging</li>
+          <li>Monthly performance summary</li>
+        </ul>
+      </div>
+
+      <div class="price featured">
+        <div class="badge">Most popular</div>
+        <h4>Growth</h4>
+        <p class="amount">£749<span class="hint">/month</span></p>
+        <p class="per">+ £1,250 one-time setup</p>
+        <ul>
+          <li>Website + IG/FB</li>
+          <li>Automated follow-up sequences</li>
+          <li>CRM pipeline + tagging</li>
+          <li>White-label reporting dashboard</li>
+          <li>Monthly optimisation</li>
+        </ul>
+      </div>
+
+      <div class="price">
+        <h4>Premium</h4>
+        <p class="amount">£1,499<span class="hint">/month</span></p>
+        <p class="per">+ £2,500 one-time setup</p>
+        <ul>
+          <li>Multi-location support</li>
+          <li>Advanced reactivation campaigns</li>
+          <li>Custom knowledge base</li>
+          <li>Priority support</li>
+          <li>Quarterly strategy review</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Pricing can be localised for Bulgaria (BGN) and adapted for other industries (appointments, bookings, enquiries).</p>
+  </section>
+
+  <section id="faq">
+    <h2 class="section-title">FAQ</h2>
+    <p class="section-sub">Common questions from business owners.</p>
+
+    <div class="faq">
+      <details>
+        <summary>Do we need new software or staff training?</summary>
+        <p>No. The system runs on your existing channels. Staff receive notifications and handle escalations when needed.</p>
+      </details>
+      <details>
+        <summary>How fast can we go live?</summary>
+        <p>Typically within 5–7 days once we receive your onboarding info and booking method.</p>
+      </details>
+      <details>
+        <summary>Is it GDPR-compliant?</summary>
+        <p>We implement data-minimised capture and escalation rules. We only store what’s needed to book and follow up.</p>
+      </details>
+      <details>
+        <summary>Do you run paid ads as well?</summary>
+        <p>Yes. We can run click-to-message and search campaigns and route every click into an AI conversion flow for measurable bookings.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Book a demo</h2>
+    <p class="section-sub">
+      Share your details and we’ll send a booking link and a short outline of what we’d install for your business.
+    </p>
+
+    <div class="two-col">
+      <form class="panel contact" action="https://formspree.io/f/yourformid" method="POST">
+        <input name="name" placeholder="Your name" required />
+        <input name="business" placeholder="Business name" required />
+        <input name="industry" placeholder="Industry (e.g., clinic, salon, fitness, real estate)" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input name="phone" placeholder="Phone (optional)" />
+        <textarea name="message" placeholder="Which channels do you want to automate? (Website / IG / FB / WhatsApp)"></textarea>
+        <button class="btn" type="submit">Request demo</button>
+        <div class="hint">
+          Free option: replace the form action with your own Formspree endpoint, or use a Google Form link instead.
+        </div>
+      </form>
+
+      <div class="panel">
+        <h3>What happens next</h3>
+        <p class="small">A simple process designed for speed.</p>
+        <ul>
+          <li>10-minute demo call</li>
+          <li>Onboarding form (hours, services, pricing, booking link)</li>
+          <li>Install AI agents + CRM + reporting</li>
+          <li>Go live and optimise monthly</li>
+        </ul>
+        <p class="note">
+          Prefer email? Use: <b>hello@enqora.ai</b> (replace once your domain email is live).
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+      <div>© <span id="y"></span> Enqora AI. All rights reserved.</div>
+      <div>UK-first, scalable to Bulgaria and beyond.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
